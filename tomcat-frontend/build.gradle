@@ -1,0 +1,12 @@
+plugins {
+  id 'loomtest.jdk-19-preview'
+}
+
+springBoot {
+  mainClass = 'loomtest.TomcatFrontendApplication'
+}
+
+dependencies {
+  implementation 'org.springframework.boot:spring-boot-starter-web'
+  testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}

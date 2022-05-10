@@ -1,0 +1,19 @@
+plugins {
+  id 'java-gradle-plugin'
+}
+
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+gradlePlugin {
+  plugins {
+    conventionsPlugin {
+      id = 'loomtest.conventions'
+      implementationClass = 'loomtest.ConventionsPlugin'
+    }
+    jdk19PreviewPlugin {
+      id = 'loomtest.jdk-19-preview'
+      implementationClass = 'loomtest.Jdk19PreviewPlugin'
+    }
+  }
+}

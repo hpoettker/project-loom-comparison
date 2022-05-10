@@ -1,0 +1,18 @@
+plugins {
+  id 'loomtest.jdk-19-preview'
+}
+
+springBoot {
+  mainClass = 'loomtest.ServletBackendApplication'
+}
+
+dependencies {
+  implementation('org.springframework.boot:spring-boot-starter-web') {
+    exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
+  }
+  implementation('org.springframework.boot:spring-boot-starter-jetty') {
+    exclude group: 'org.eclipse.jetty.websocket', module: 'websocket-server'
+    exclude group: 'org.eclipse.jetty.websocket', module: 'javax-websocket-server-impl'
+  }
+  testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
