@@ -149,7 +149,14 @@ java -Xmx12g -jar reactive-backend/build/libs/reactive-backend.jar
 ## Response times
 
 The following response metrics are taken from the Apache Bench output of
-representative runs. Times are in milliseconds if not explicitly given.
+representative runs. Times are in milliseconds if not stated otherwise.
+
+Note that the figures cannot be directly compared with those generated
+from Mircohttp in
+[Project Loom Comparison](https://github.com/ebarlas/project-loom-comparison)
+as that comparison used a c5.2xlarge instance also for the frontend.
+Unfortunately, the servlet apps were unstable on that machine size for
+under high load.
 
 ### Servlet with Platform Threads
 
