@@ -120,7 +120,7 @@ The servlet frontend was compiled and run with the early access JDK 19 build,
 and given an ample amount of threads:
 
 ```
-java -Xmx12g -jar servlet-frontend/build/libs/servlet-frontend.jar --spring.profiles.active=loom --backend.url=http://<backend ip>:8080 
+java --enable-preview -Xmx12g -jar servlet-frontend/build/libs/servlet-frontend.jar --spring.profiles.active=loom --backend.url=http://<backend ip>:8080 
 ```
 
 ### Reactive
